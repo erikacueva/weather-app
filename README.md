@@ -1,4 +1,4 @@
-# weather-app
+# Weather App
 This app was an exercise in retreiving data from another application's API. 
 
 A traveller will be presented with a weather dashboard that shows the 5-day forecast. The user may enter the name of up to five cities; the list of cities will be saved to the page for retrieval at the user's convenience. Icons provide a visual representation of weather conditions. 
