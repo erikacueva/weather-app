@@ -10,6 +10,14 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css">
+
   </head>
   <body>
     <div class="container-fluid">
@@ -17,7 +25,7 @@
       <div class="bg-dark collapse show" id="navbarHeader" style="">
         <div class="container">
           <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
+            <div class="col-sm-8 col-md-7 py-4" >
               <h3 class="text-white text-center">Weather Dashboard</h3>
             </div>
           </div>
@@ -25,39 +33,68 @@
       </div>
       <br />
 
-      <!-- <div class="card float-left bg-primary px-md-5">Float left on all viewport sizes</div>  -->
-
+  
+      
+<div class="col-sm-4">
+  <h4>Search for a city:</h4>
       <form class="form-inline my-2 my-lg-0">
+    
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-primary my-2 my-sm-0" type="submit"> <i class="fas fa-search"></i></button>
       </form>
+      <br>
+    </div>
       <div class="row">
         
-        <div class="col-sm-4" id="cityBox">
+      <div class="col-sm-4" id="cityBox">
         <div class="list-group">
-          <div class="list-group-item"> City</div>
+          <div class="list-group-item "> City</div>
           <div class="list-group-item"> City</div>
           <div class="list-group-item"> City</div>
           <div class="list-group-item"> City</div>
           <div class="list-group-item"> City</div>
 
         </div>
-        
-
-
       </div>
-
-      <div class="col-sm-8">
+    
+          <div class="col-sm-8">
         <h5 class="card-header">Featured</h5>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">
-            With supporting text below as a natural lead-in to additional
-            content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+        
+          <div class="card-body">
+          <h5 class="card-title">5-Day Forecast:</h5>
+          
+            <div class="row">
+              <div class="col-sm-2 other bg-primary rounded">
+                <br>
+                <h6 class="text-white">Date</h6>
+                <p class="text-white"> Test </p>
+              </div>
+              <div class="spacer">......</div> 
+              <div class="col-sm-2 other bg-primary rounded">
+                <br>
+                <h6 class="text-white">Date</h6>
+                <p class="text-white"> Test </p>
+              </div>
+              <div class="spacer">......</div> 
+              <div class="col-sm-2 other bg-primary rounded">
+                <br>
+                <h6 class="text-white">Date</h6>
+                <p class="text-white"> Test </p>
+              </div>
+              <div class="spacer">......</div> 
+              <div class="col-sm-2 other bg-primary rounded">
+                <br>
+                <h6 class="text-white">Date</h6>
+                <p class="text-white"> Test </p>
+              </div>
+              <div class="spacer">......</div> 
+              <div class="col-sm-2 other bg-primary rounded">
+                <br>
+                <h6 class="text-white">Date</h6>
+                <p class="text-white"> Test </p>
+              </div>
+          
+            </div>      
     </div>
   </body>
 </html>
