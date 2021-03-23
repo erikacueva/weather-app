@@ -5,7 +5,7 @@ var searchCity = $("#search-city");
 var searchButton = $("#search-button");
 var currentCity = $("#current-city");
 var currentTemp = $("#temperature");
-var currentHumidty = $("#humidity");
+var currentHumidity = $("#humidity");
 var currentWind = $("#wind-speed");
 
 
@@ -54,9 +54,9 @@ function currentWeather(city) {
       response.name + "(" + date + ")" + "<img src=" + iconURL + ">"
     );
     var temp = (response.main.temp - 273.15) * 1.8 + 32;
-    // display the temp with the F symbol
+    // display the temp with the Farenheit symbol
     $(currentTemp).html(temp.toFixed(2) + "&#8457");
-    $(currentHumidty).html(response.main.humidty + "&");
+    $(currentHumidity).html(response.main.humidity + "%");
     var w = response.wind.speed;
     var wind = (w * 2.237).toFixed(1);
     $(currentWind).html(wind + "MPH");
