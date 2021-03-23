@@ -101,7 +101,7 @@ function currentWeather(city) {
       "https://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
     var date = new Date(response.dt * 1000).toDateString();
 
-    // concatinate the date and icon
+    // add the icon and date
     $(currentCity).html(
       response.name + ": " + date + "<img src=" + iconURL + ">"
     );
@@ -180,13 +180,13 @@ function fiveDayForecast(id) {
   });
 }
 
-
-
 // past city searches
 function cityHistory(event) {
+  console.log(event);
   var pastsearch = event.target;
   if (event.target.matches("li")) {
     city = pastsearch.textContent.trim();
+    console.log(city);
     currentWeather(city);
   }
 }
@@ -201,22 +201,32 @@ function loadCities() {
       find(cityArray[i]);
     }
     city = cityArray[i - 1];
-    currentWeather(city);
+    cityDisplay(cityArray);
   }
 }
 
-function cityDisplay(p){
-  var liElement= $("<li>"+c.toUpperCase()+"</li>");
-  $(liElement).attr("class","list-group-item");
-  $(liElement).attr("data-value",p.toUpperCase());
-  $(".list-group").append(liElement);
-}
+// for (i = 0; i < parseData.length; i++) {
+//   var output = $("<button>").attr("type", "button").attr("class", "historyBtn list-group-item text-left").text(parseData[i]);
+//   history.append(output);
+// }
 
+function cityDisplay(p) {
+  // for (i = 0; i < cityArray.length; i++) {
+    console.log(p);
+    var list = $("#list");
+    for (i = 0; i < p.length; i++) {
+      var output = $("<li>").attr("class", "historyBtn list-group-item text-left").text(p[i]);
+      list.append(output);
+    }
+  // var liElement = $("<li>" + p.toUpperCase() + "</li>");
+  // $(liElement).attr("class", "list-group-item");
+  // $(liElement).attr("data-value", p.toUpperCase());
+  // $(".list-group").append(liElement);
+  // (cityArray; i++)
+  
+}
 
 //Click Handlers
 $("#search-button").on("click", displayWeather);
 $(document).on("click", cityHistory);
 $(window).on("load", loadCities);
-
-
-
