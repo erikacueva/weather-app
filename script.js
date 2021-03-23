@@ -54,26 +54,24 @@
 
 //Declare a variable to store the searched city
 var city = "";
-// variable declarations
-var searchCity = $("#search-city");
-var searchButton = $("#search-button");
-var currentCity = $("#current-city");
-var currentTemp = $("#temperature");
 
-var currentWind = $("#wind-speed");
+var searchButton = $("#search-button");
+
+
 
 var APIkey = "9aef3a1366ac2f774ab80c44e3b4e8cd";
 
 // check for existing cities in local storage
-function find(c) {
+function find(l) {
   for (var i = 0; i < cityArray.length; i++) {
-    if (c.toUpperCase() === cityArray[i]) {
+    if (l.toUpperCase() === cityArray[i]) {
       return -1;
     }
   }
   return 1;
 }
 
+var searchCity = $("#search-city");
 // display the forceast
 function displayWeather(event) {
   event.preventDefault();
@@ -83,6 +81,7 @@ function displayWeather(event) {
   }
 }
 var currentHumidity = $("#humidity");
+var currentCity = $("#current-city");
 var cityArray = [];
 // AJAX call
 function currentWeather(city) {
@@ -133,6 +132,10 @@ function currentWeather(city) {
   });
 }
 
+var currentTemp = $("#temperature");
+
+var currentWind = $("#wind-speed");
+
 var uvIndex = $("#uv-index");
 // function to return uv index
 function UV(ln, lt) {
@@ -152,7 +155,6 @@ function UV(ln, lt) {
 }
 
 function fiveDayForecast(id) {
-  var endofday = false;
   var forecastURL =
     "https://api.openweathermap.org/data/2.5/forecast?id=" +
     id +
@@ -205,10 +207,6 @@ function loadCities() {
   }
 }
 
-// for (i = 0; i < parseData.length; i++) {
-//   var output = $("<button>").attr("type", "button").attr("class", "historyBtn list-group-item text-left").text(parseData[i]);
-//   history.append(output);
-// }
 
 function cityDisplay(p) {
   // for (i = 0; i < cityArray.length; i++) {
@@ -218,11 +216,6 @@ function cityDisplay(p) {
       var output = $("<li>").attr("class", "historyBtn list-group-item text-left").text(p[i]);
       list.append(output);
     }
-  // var liElement = $("<li>" + p.toUpperCase() + "</li>");
-  // $(liElement).attr("class", "list-group-item");
-  // $(liElement).attr("data-value", p.toUpperCase());
-  // $(".list-group").append(liElement);
-  // (cityArray; i++)
   
 }
 

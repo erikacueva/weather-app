@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <!--Bootstrap CSS CDN-->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
-    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Title -->
-    <div class="jumbotron container-fluid p-1" style="background-color:orange">
-        <h1> <strong>Weather Dashboard</strong></h1>
+    <div class="jumbotron p-1" style="background-color:green">
+        <h1> Weather Dashboard</h1>
     </div>
     
     <div class="container">
@@ -24,7 +23,7 @@
                 <div class="input">
                     <input type="text" class="form-control"id="search-city">
                     <div class="input-group-append">
-                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                        <button class=" btn bg-primary" id="search-button"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
                
@@ -35,14 +34,14 @@
             <div class="col-sm-8">
                 <div class="row ml-2 border border-dark rounded">
                     <div class="col-sm-12" id="current-weather">
-                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <h3 class=" mb-1 mt-2" id="current-city"></h3>
                         <p>Temperature:<span class="current" id="temperature"></span></p>
                         <p>Humidity:<span class="current" id="humidity"></span></p> 
                         <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
                         <p>UV index:<span class="current" id="uv-index"></span></p> 
                     </div>
                 </div>
-                <div class="col-sm-12" id ="future-weather">
+                <div class="col-sm-12" id ="forecast5">
                     <h3>5-Day Forecast:</h3>
                     <div class="row text-light">
                         <div class="col-sm-3 bg-primary forecast  ml-3 mb-3 p-2 rounded" >
